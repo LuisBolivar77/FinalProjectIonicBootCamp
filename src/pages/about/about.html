@@ -10,5 +10,6 @@
 
     <div *ngFor= "let postsMostrar of postLista | async">
         <button (click)="goToSecondPage(postsMostrar)">{{ postsMostrar.title }}</button>
+        
     </div>
 </ion-content>

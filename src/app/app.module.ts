@@ -19,7 +19,7 @@ import { AuthProvider } from '../providers/auth/auth';
 import { LogInPage } from '../pages/log-in/log-in';
 import { RegisterPage } from '../pages/register/register';
 import { Camera } from '@ionic-native/camera';
-import { HttpClientModule, HttpClient, HttpHandler } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 const confi = {
   apiKey: "AIzaSyAtIG2pGGnFme4hloCL59ZOa-VbqTsSQE8",
@@ -46,7 +46,8 @@ const confi = {
     AngularFireDatabaseModule,
     AngularFireStorageModule,
     AngularFirestoreModule, 
-    AngularFireModule.initializeApp(confi)
+    AngularFireModule.initializeApp(confi), HttpClientModule
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -62,7 +63,7 @@ const confi = {
     SplashScreen,
     Camera,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider, HttpClient 
+    AuthProvider, HttpClientModule
   ]
 })
 export class AppModule {}

@@ -26,7 +26,7 @@ export class AboutPage {
   }
 
   goToSecondPage(post: Post): void {
-    this.navCtrl.push('SecondPage', {postEnviar: post});
+    this.navCtrl.push('InfoPostPage', {postEnviar: post});
   }
 
 }
